@@ -1,0 +1,18 @@
+<form (ngSubmit)="onRegisterTodo()" [formGroup]="todoForm" >
+
+  <div class="form-row align-items-center">
+    <div class="col-xs-12 col-sm-10 col-md-10 my-1">
+      <label for="id-tarefa" class="sr-only">Tarefa</label>
+      <input type="text" class="form-control" placeholder="Tarefa" id="id-tarefa" formControlName="tarefa">
+    </div>
+
+    <div class="col-xs-12 col-sm-2 col-md-2 my-1">
+      <button type="submit" id="button-adicionar-tarefa" class="btn btn-primary btn-block" [disabled]="loading || todoForm.invalid" >Adicionar</button>
+    </div>
+
+  </div>
+</form>
+
+<app-hr></app-hr>
+
+<app-todo-list></app-todo-list>

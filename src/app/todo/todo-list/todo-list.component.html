@@ -1,0 +1,21 @@
+<ul class="list-group list-group-flush">
+  <li *ngFor="let todo of todos" class="list-group-item list-group-item-info pr-1">
+      <div class="custom-control custom-checkbox my-1 mr-sm-2">
+          <input type="checkbox" class="custom-control-input" [id]="'item-'+todo.id" [(ngModel)]="todo.concluido" (change)="updateStatus(todo)">
+          <label class="custom-control-label" [ngClass]="{concluido: todo.concluido}" [for]="'item-'+todo.id">{{ todo.tarefa }}</label>
+
+          <button type="button"
+                  [id]="'delete-button-item-'+todo.id"
+                  class="close float-right"
+                  aria-label="Close"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Tooltip on top"
+                  (click)="deleteTodo(todo)"
+          >
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+
+  </li>
+</ul>
