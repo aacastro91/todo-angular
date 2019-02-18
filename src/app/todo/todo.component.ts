@@ -12,7 +12,7 @@ export class TodoComponent implements OnInit {
 
   public todoForm: FormGroup;
 
-  private loading = false;
+  public loading = false;
 
   constructor(private fb: FormBuilder, private todoService: TodoService) {
   }
