@@ -1,6 +1,7 @@
-# Todo
+[![Build Status](https://travis-ci.org/aacastro91/todo-angular.svg?branch=master)](https://travis-ci.org/aacastro91/todo-angular)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/aacastro91/todo-angular/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/aacastro91/todo-angular/?branch=master)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+# Todo
 
 ## Development server
 
