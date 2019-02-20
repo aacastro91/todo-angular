@@ -28,13 +28,14 @@ module.exports = function (config) {
             }
         },
         coverageReporter: {
-            type : 'lcov',
-            dir : 'coverage/'
+            reporters: [
+                // generates ./coverage/lcov.info
+                {type:'lcovonly', subdir: '.'},
+                // generates ./coverage/coverage-final.json
+                {type:'json', subdir: '.'},
+            ]
         },
         reporters: ['progress', 'coverage'],
-        preprocessors: {
-            'src/app/**/*.js': ['coverage']
-        },
         customLaunchers: {
             ChromeHeadlessNoSandbox: {
                 base: 'ChromeHeadless',
